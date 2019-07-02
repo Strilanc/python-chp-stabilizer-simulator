@@ -1,10 +1,10 @@
 import random
-from typing import Union
+from typing import Union, Any
 
 import numpy as np
 
 
-class StabilizerSimCore:
+class ChpSimulator:
     """The bare minimum needed for the CHP simulation.
 
     Reference:
@@ -143,6 +143,9 @@ class StabilizerSimCore:
         sep = ['-' * (self._n + 1)]
         x_obs = [_row(row) for row in range(self._n, 2 * self._n)]
         return '\n'.join(z_obs + sep + x_obs)
+
+    def _repr_pretty_(self, p: Any, cycle: bool) -> None:
+        p.text(str(self))
 
 
 def pauli_product_phase(x1: bool, z1: bool, x2: bool, z2: bool) -> int:
