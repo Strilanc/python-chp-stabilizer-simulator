@@ -23,7 +23,7 @@ description = ("Reference implementation of Aaronson et al's CHP simulator "
                "for efficiently simulating quantum stabilizer circuits.")
 
 # README file as long_description.
-long_description = io.open('README.md', encoding='utf-8').read()
+long_description = io.open('README.rst', encoding='utf-8').read()
 
 # Read in requirements
 requirements = open('requirements.txt').readlines()
