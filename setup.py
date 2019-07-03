@@ -19,7 +19,7 @@ from setuptools import setup
 __version__ = ''
 exec(open('chp_sim/version.py').read())
 
-description = ("Reference implementation of Aaronson et al's CHP simulator "
+description = ("A reference implementation of Aaronson et al's CHP simulator "
                "for efficiently simulating quantum stabilizer circuits.")
 
 # README file as long_description.
@@ -37,6 +37,6 @@ setup(name='chp_sim',
       python_requires='>=3.6.0',
       install_requires=requirements,
       license='Apache 2',
-      description='',
+      description=description,
       long_description=long_description,
       packages=['chp_sim'])
